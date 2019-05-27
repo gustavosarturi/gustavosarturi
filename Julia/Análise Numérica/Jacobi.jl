@@ -14,7 +14,7 @@ function Jacobi(A, XO, b; max_tol = 10^(-8), max_it = 1000)
             end
         end
 
-        if norm(XO-x,Inf)/norm(x) < max_tol
+        if norm(XO-x,Inf)/norm(x, Inf) < max_tol
             return x, XO, it
         end
         XO = x
